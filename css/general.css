@@ -1,0 +1,435 @@
+/* udemy session- 113 
+inside css folder -creat new folder, called general.css 
+paste code from style.css */
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+semi-bold: 600
+bold: 700
+
+- Line heights
+Default: 1 
+small: 1.05
+Medium 1.2
+paragraph default: 1.6
+large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+Primary: #e67e22
+- Tints: 
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+- Accents:
+- Greys
+
+#888
+#767676 ( lightest-gray allowed on #fff)
+#616161 ( lightest-grey allowed on #fdf2e9)
+#555 
+#333 dark-gray 
+
+--- 05 SHADOWS 
+
+ ----make box around meal-pic ad bottome---- 
+box-shadow: 0 2.4rem 4.8rem rgba(0,0,0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+medium: 11px
+
+--- 07 Spacing system (px)  -[WHITESPACE]
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* if we text here [font-size: 10px] then 1 will be 10px nt 16px 
+  changing font-size can change the entire layout 
+  if we want to change all the values of full screen we can change from here  */
+  /*font-size: 10px;*/
+
+  /* (divide) 10px / 16px = 0.625  = 62.5% */
+  /* Percentage of user's browser font-size setting 340*/
+  font-size: 62.5%;
+  /* sec-134*/
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter" sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  /* sec-134
+  only works if there is nothing absolutely
+  positioned in relation to body */
+  overflow-x: hidden;
+}
+
+/*****************************/
+/* GENERAL REUSALE COMPONENTS */
+/*****************************/
+
+/* EDITING IMGS */
+/*set page in center
+-food box in bottom */
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  /* space stays to sides, to show full page
+  after making small our page */
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/* EDITING IMGS
+-give gap in top of imgs */
+.grid {
+  /* make separate box for each */
+  display: grid;
+  /* give gap in the middle B/W P-img ad :-moz-animation: display:- 
+  left-click on img, type in- elements.style { [align-items: center;]*/
+  column-gap: 9.6rem;
+  /* gape between box */
+  row-gap: 9.6rem;
+
+  /* space for EDITING -[PAGE 6]
+  NOW NO NEED FOR IT coz we add in 
+  .grid:not(:last-child) */
+  /*margin-bottom: 9.6rem;*/
+}
+
+/* avoiding too much spacing after page-2, 
+B/C it increased after we add in 
+.grid { (margin-bottom: 9.6;) } */
+/*.grid:last-child {
+  margin-bottom: 0;
+}*/
+
+/******************************/
+/* space in bottom for page 6 */
+/******************************/
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+/* EDITING IMGS
+-shift imgs right side */
+.grid--2-cols {
+  /* (2, 1fr) 1fr twice */
+  /* make horizontal line B/W */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  /* (2, 1fr) 1fr twice */
+  /* make horizontal line B/W */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  /* (2, 1fr) 1fr twice */
+  /* make horizontal line B/W */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/**************SECTION-126****************/
+/***********FOOTER  P-7******************/
+/*.grid--5-cols {
+  /* (2, 1fr) 1fr twice */
+/* make horizontal line B/W */
+/* grid-template-columns: repeat(5, 1fr);
+}*/
+
+/*****************************************/
+
+/*.section-how div div {
+  /* box size */
+/*padding: 100px;
+  /* text size */
+/*font-size: 50px;
+  background-color: #333;
+} */
+
+/*.section-how div:nth-child(1) {
+  background-color: aqua;}
+
+.section-how div:nth-child(2) {
+  background-color: blue;}
+
+.section-how div:nth-child(3) {
+  background-color: violet;}
+
+.section-how div:nth-child(4) {
+  background-color: yellow;} */
+
+/* IN index.html*/
+
+/*<section class="section-how">
+        <div class="container grid grid--2-cols">
+          <div>Test 1</div>
+          <div>Test 2</div>
+          <div>Test 3</div>
+          <div>Test 4</div>
+        </div>
+      </section>*/
+
+.grid--center-v {
+  align-items: center;
+}
+
+/* H1,H2 [top/bottom] */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  /* bold */
+  font-weight: 700;
+  /* no need to remove this */
+  color: #333;
+  /* for selecting shade color
+  google- tint and shade generator/ OPEN COLOR */
+  color: #45260a;
+  letter-spacing: -0.5px;
+}
+
+/*h1*/
+.heading-primary {
+  /* text size */
+  font-size: 5.2rem;
+  /* gap after 1-line*/
+  line-height: 1.05;
+  /* gap after H */
+  /* (px)- give 1 line gap/ (32) rem-give more gap*/
+  margin-bottom: 3.2rem;
+}
+
+/* H2 [bottom page] SIZE */
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+/*sec-113*/
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  /* CAPITAL */
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+/*design all links bottom of h1
+.btn -is for page-6 inside box of email */
+.btn,
+.btn:link,
+.btn:visited {
+  /* give down-arrow at last */
+  display: inline-block;
+  /*background-color: #e67e22;*/
+
+  text-decoration: none;
+  /* making text alittle bold */
+  font-size: 2rem;
+  font-weight: 600;
+  /* space inside box make 2 separate box-left/ryt */
+  padding: 1.6rem 3.2rem;
+  /*make round shape */
+  border-radius: 9px;
+
+  /*** only necessary for .btn ***/
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /*******************************/
+
+  /* after clicking link it set time to 
+change color over 0.3 sec not on the spot
+[hold sometime]-
+
+[put transition on original "state"] */
+  /*transition: background-color 0.3s;*/
+  transition: all 0.3s;
+}
+
+/*give D/F separate color to both link*/
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+  /* give space B/W button */
+  margin-right: 1.6rem;
+}
+
+/* 1st link- change color after clicking */
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+/*2nd link*/
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+/* page-1 link -change color after clicking */
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /* give light-color border to 
+  visible box color after clicking*/
+  /* border: 3px solid #fff;*/
+
+  /* trick to add border inside of the batton 
+  after clicking to link white-border visible */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+/**************************************************/
+/* this should placed but here it doesnt work*/
+/*.margin-right-sm {
+  /* give space B/W button */
+/*margin-right: 1.6rem !important;  
+} /*
+/**************************************************/
+
+/* p-6 link [sign up now ] inside email box 
+& its linked to up also [.btn] */
+.btn--form {
+  /* same color like body */
+  background-color: #45260a;
+  /* text color */
+  color: #fdf2e9;
+  /* make box shorter like other box */
+  align-self: end;
+
+  /* box size- are same exact height like 
+  [ .cta-form input,
+    .cta-form select ]*/
+  padding: 1.2rem;
+}
+
+/* link color change after clicking */
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+/* designing link in bottom */
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  /* underline */
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  /* change color after few sec */
+  transition: all 0.3s;
+}
+
+/* color change after clicking */
+.link:hover,
+.link:active {
+  color: #cf711f;
+  /* after clicking remove underline 
+  border-bottom: none;   OR - */
+  border-bottom: 1px solid transparent;
+}
+
+/* SECTION - 117 */
+/*Designing side of 3rd-box*/
+.list {
+  list-style: none;
+  /* set text side/side vertically */
+  display: flex;
+  /* set text back horizontal - 90 degree  */
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* designing paragraph */
+.list-item {
+  font-size: 1.8rem;
+  /* sheft text infront of imoji */
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  /* space after each line */
+  line-height: 1.2;
+}
+
+/* tick mark emoji */
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+/*it stops for getting focused blue-ring (outline) 
+around the box-links after clicking or press tab key */
+*:focus {
+  outline: none;
+  /* instead of blue-ring it design dotted border 
+  to all links after pressing tab key  
+  outline: 4px dotted #e67e22;*/
+  /* give alittle space to dottd border 
+  outline-offset: 8px;*/
+
+  /*design to links after pressing tab key */
+
+  /* in (general.css) its nt working for p-6 B/C the bg is 
+  dark so we edit in (style.css) also ad change color there */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+/* HELPER / SETTINGS CLASSES  sec-117*/
+
+/* space after box */
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+/* MEAL - HEADING */
+.center-text {
+  text-align: center;
+}
+
+/* 650 calories.. sec-116*/
+strong {
+  font-weight: 600;
+}

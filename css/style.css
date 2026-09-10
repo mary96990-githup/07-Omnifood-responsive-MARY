@@ -1,0 +1,1068 @@
+/* Build Responsive Real-World Websites with HTML and CSS */
+
+/* udemy last session - 103 - 113 */
+/* ryt click to [EXPLORE] site- new folder- type [css]- put [style.css] in css folder. sec-103 */
+
+/* TO DOWNLOAD EMEDIATLY ANY PIC- SEARCH [Unsplash.com] -search any name ...  
+FOR CUSTOMERS Search- [UI faces] */
+
+
+
+/*****************************/
+/* HEADER */
+/*****************************/
+
+/* editing logo */
+.header {
+  /*put navigation-[<nav>] up */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /*Because we want header to be sticky later */
+  height: 9.6rem;
+  /* getting closer the logo & navigation */
+  padding: 0 4.8rem;
+  /* sec-134
+  it stops the scrolling vertically -right page -to see navigation */
+  position: relative;
+}
+
+.logo {
+  height: 5.2rem;
+  /*2.2rem should be added but i want 5 */
+}
+
+
+
+/*****************************/
+/* NAVIGATION */
+/*****************************/
+
+
+.main-nav-list {
+  /*removed (.)*/
+  list-style: none;
+  /* set all text-[ul/li] vertical line */
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  /*shift link to top end*/
+  display: inline-block;
+  /*removing underline */
+  text-decoration: none;
+  color: #333;
+  /* bold */
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+/*after clicking color <nav> top*/
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+/* last-word changing color -<nav> on top after clicking*/
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  /*underline to top after nav*/
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #cf711f; 
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+
+/*SEC-134 [link frm ionicon] ( BUILDING THE MOBILE NAVIGAITON ) */
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+/* it turned off the menue icon as well 
+b/c for normal width we want to be gone, 
+will be working on @media..  */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/* hide the crose-X frm top, now its turned off ad X-icon is gone but
+once user clicks on button 
+we will switch frm the menue icone to the close icon */
+.icon-mobile-nav[name="close-outline"] {
+ display: none;
+}
+
+
+/****************************************************************/
+
+
+
+
+
+
+
+/*****************************/
+/* HERO SECTION */ 
+/*****************************/
+
+/*EDITING PAGE*/
+.section-hero {
+  /* if we set all text in center, it color
+  full the background by adding code here */
+  background-color: #fdf2e9;        
+  /*#fae5d3;*/
+  /* space inside of element sides/top/bottom */
+  /*padding: 4.8rem 9.6rem 0; */
+   padding: 4.8rem 0 9.6rem 0;
+  
+}
+
+
+/******************************************************/
+/* MEDIA QUERIES WORK SEC-129 */ 
+/*****************************/
+/* after making our page small, screen turns-red */
+/*@media(max-width: 1200px) {
+  .section-hero {
+    background-color: orangered;
+  }
+}*/
+/* after making our page small up to 600, 
+screen border turns-blue */
+/*@media(max-width: 600px) {
+  .section-hero {
+    border: 20px dashed  blue;
+    /* turns bg-color -yellow after making screen 600*/
+   /* background-color: yellow;
+  }4r
+}*/
+/*****************************************************/
+
+/* set full page in center */
+/* edited before [.section-hero -padding..] */
+/* copied frm google- margin-left: auto;
+                    margin-right: auto;
+                    width: 600px;
+                    display: flex;
+                    align-items: center;
+                    height: 100vh; /*
+original- max-width: 130rem;
+         margin: 0 auto;
+         display: gride;
+         grid-template-columns: 1fr 1fr;
+         align-items: center;
+          */
+
+          
+
+
+
+
+/* it set whole page no need to scroll in small page */          
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  /* space stays to both sides, to show full page
+  after making small our page */
+  padding: 0 3.2rem;
+  display: grid;
+  /* if we have 2 pic- 1fr 1fr set them side/side
+  if 1-pic -it set to right side */
+  grid-template-columns: 1fr 1fr;
+  /*background-color: purple;*/ 
+  /* space inside of element B/W img-text*/
+  gap: 9.6rem;
+  /* set the page in to center */
+  align-items: center;
+  
+}
+
+/*P*/
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+
+.hero-img {
+ width: 100%;
+ /*click left on img- inspect- add in .hero-img-
+ opacity: (50%)*/
+ /*it make pic gray-color to make visible*/
+}
+
+
+
+/*
+NO NEED FOR THIS :- 
+
+index.html=  <div class="test">TEST</div>
+style.css= 
+
+.test {
+  background-color: red;
+  /*width: 1000px;*/
+  /*max-width: 1000px;*/
+
+ /* max-width: 50rem;
+  /* text color */
+ /* padding: 4rem;
+  /* shows full screen in small size, stops scrolling [left/right]*/
+  /*color: #fff;
+  /* text size 2rem = 34 */
+ /* font-size: 2rem;
+  /* 1 rem = 16px -> 50rem = 800px */
+}*/
+
+
+
+/* if it doesnt work, need to type in 
+[.btn--full:link, 
+.btn--full:visited ]
+
+[ both work same but typing here is imp ]*/
+
+.margin-right-sm {
+  /* give space B/W button */
+ margin-right: 1.6rem !important;  
+} 
+
+
+/* editing bottom img & text of [customers] */
+.delivered-meals {
+  /* put text in front of img in bottom */
+  display: flex;
+  /* put text in center of img in bottom */
+  align-items: center;
+  gap: 1.6rem;
+  /* gap to the top of text */
+  margin-top: 8rem;
+}
+
+
+ /* put imgs side/side */
+.delivered-imgs {
+  display: flex;
+}
+
+
+/* make pic round ad small size */
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  /* put text side closer */
+  margin-right: -1.6rem;
+  /* color-white [circle border of imgs-customer] */
+  border: 3px solid #fdf2e9;
+}
+
+
+/* space b/w text ad img in bottom [customers] */
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+/*text size in the bottom of imgs [customers]*/
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+/* [to check color matching]
+google- coolers- more- contrast checker- 
+paste ur color code. */
+
+/* color only 1 word B/W paragraph*/
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+
+
+/*****************************/
+/* p-2    LOGOS- FEATURED IN SECTION - 114 */
+/*****************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  /*color of- [As featured in] */
+  color: #888;
+}
+
+.logos {
+  /* shift all logos automatically side/side
+  vertically */
+  display: flex;
+  /*space-between/around*/
+  justify-content: space-around;
+}
+
+.logos img {
+height: 9.2rem;
+/* changed all logos color into-gray
+filter: grayscale(100%);*/
+/* it make all img black-color*/
+filter: brightness(0)
+/*it make pic gray-color to make visible*/
+opacity(50%);
+}
+
+
+/*****************************/
+/* HOW IT WORKS SECTION - 111 */
+/*****************************/
+
+.section-how {
+  /* 9.6-(TOP,BOTTOM)  0-(SIDES) */
+  padding: 9.6rem 0;
+}
+
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  /*#eee; light-gray*/
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+/* P of bottom page */
+.step-description {
+  font-size: 1.8rem;
+  /* gap after each line */
+  line-height: 1.8;
+
+}
+
+
+/* for making iphone img in center of text */
+.step-img-box {
+  /* put the [circle in front of img-iphone] */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  /* for shape we need to do block element */
+  display: block;
+   /* to make [round the square] bg-img*/
+   border-radius: 50%;
+
+  /*make bg [circle huge] to bring on img- 
+  .step-img-box {
+  position: relative; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* it shape the element for [circle bg-iphone]*/
+  transform: translate(-50%, -50%);
+  /* put the [circle behind the img-iphone] */
+}
+
+
+/* [CIRCLE DESIGN IN BACKGROUD OF IMG-IPHONE] */
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%;*/
+ 
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+ 
+   background-color: #fdf2e9;
+   /* put the circle-color in behind of the img */
+   z-index: -2;
+}
+
+
+
+
+/* [inside circle creat another small circle] bg-img-iphone]*/
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  /* put the circle-color in behind of the img */
+  z-index: -1;
+}
+
+
+/* making iphone-img smaller */
+.step-img {
+  width: 65%;
+  /* [another way to put circle behind img-iphone]*/
+  /*z-index: 10;*/
+}
+
+/*****************************/
+/* MEALS SECTION - 115 */
+/*****************************/
+
+.section-meals {
+  /* 9.6-(TOP,BOTTOM)  0-(SIDES) */
+  padding: 9.6rem 0;
+}
+
+.meal {
+  /* curve sides of meal-pic ad bottome */
+  box-shadow: 0 2.4rem 4.8rem rgba(0,0,0, 0.075);
+  /*round-shape on bottom of the box */
+  border-radius: 11px;
+  /*round-shape on top of the box */
+  overflow: hidden;
+  /* white-space inside box -top,bottom,sides
+  including- top image */
+  /*padding: 4.8rem;*/
+
+  /* it holds the box movement for sec */
+  transition: all 0.4s;
+}
+
+/* box movement after clicking */
+.meal:hover {
+  /* translateY(2rem); = it moves down only horizontally */
+  /* translateY(-2rem); = it moves up */
+  
+  /* it moves 20% down ad to the right side 
+  transform: translate(2rem, 2rem);*/
+
+/* less movement to left side */
+  transform: translate(-1.2rem);
+
+  /* shadow does change alittle after clicking around-box*/
+  box-shadow: 0 3.2rem 6.4rem rgba(0,0,0, 0.06);
+}
+
+.meal-content {
+  /* p-2  white-space inside box -top,bottom,sides
+  except- top image */
+  padding: 3.2rem 4.8rem 4.8rem 4.8em;
+}
+
+.meal-tag {
+  margin-bottom: 1.2rem;
+  display: flex;
+  /*small gap b/w [ vegan-paleo ]*/
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  /* top,bottom */
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  /*bold*/
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  /* set the text side/side -vertical */
+  display: flex;
+  /* set back align-item HORIZONTALY but in 
+  90 degree, no longer vertically */
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* SECTION-116 color imoji */
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+/* for link in bottom */
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+
+/****************************/
+/* TESTIMONIALS SECTION - 118 */
+       
+       /* PAGE-4 DESIGN */
+
+/****************************/
+
+/* bg-color  page-3 */
+.section-testimonials {
+  background-color: #fdf2e9;
+  /* bottom space, 
+  here it gives a little space to background-color & big
+  padding: 9.6rem 0;*/
+
+  /* set all imgs like insta- in equal size*/
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  /* OR- grid-template-columns: 55fr 45fr;*/
+  /* IMP- Removed extra space B/W imgs- to look like insta page */
+  align-items: center;
+}
+
+.testimonials-container {
+  /* bottom space, p-3
+  here it set background-color set up to text/imgs */
+  padding: 9.6rem;
+}
+
+
+/* editing customers pic in page 4 */
+.testimonials {
+  display: grid;
+/* shift img side/side */
+  grid-template-columns: 1fr 1fr;
+/* gap B/W customers-imgs, & text- 
+set all text to same line */
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  /* img size */
+  width: 6.4rem;
+  /* round shape */
+  border-radius: 50%;
+  /* gap after customer img */
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  /* gap after each line */ 
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  /* to check color-matching, search-in-google, 
+contrast checker */
+  color: #616161;
+}
+
+
+/****************************/
+/* ------- - 119 */
+/****************************/
+
+/* page 4 right side design */
+
+
+/* set img vertically */
+.gallery {
+  display: grid;
+  /* fix all img in 3-column like insta page */
+  grid-template-columns: repeat(3, 1fr);
+  /* add small space B/W imgs like insta  */
+  gap: 1.6rem;
+  /* space-bg-color on top of img */
+  padding: 1.6rem;
+}
+
+/* after clicking img- it doesnt 
+cover other img after zooming */
+.gallery-ittem {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  /* removed gap B/W imgs */
+  display: block;
+  width: 100%;
+  /* after adding-[transform: scale(1.1)] it makes smooth to click
+  for zooming imgs- after clicking*/
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  /* rotate imgs after clicking */
+  /*transform: rotate(45deg);*/
+  /* zoom imgs after clicking */
+  transform: scale(1.1);
+}
+
+
+
+/****************************/
+/* ----PRICING  sec-120,121 */
+/****************************/
+/* page 5 right/left side design */
+
+
+.section-pricing {
+  /* space on top -to start nxt page */
+  padding: 9.6rem 0;
+}
+
+
+/* making big-box for both pricing */
+.pricing-plan {
+  /* here BG-color, color to both box */
+  /*background-color: #fdf2e9;*/
+  /* round shape-box */
+  border-radius: 11px;
+  
+  /* make box thin ad long shape 3*/
+  width: 75%;
+}
+
+/* TO SHEFT TEXT IN RIGHT SIDE, INSIDE BOX:- 
+CLICK ON BOX -INSPECT 
+-<div class="container gridgrid--2-cols" style=...
+-element.style { [add here] justify-items:end } */
+
+
+.pricing-plan--starter {
+  /* get both box closer */
+  justify-self: end;
+  /* give thin border to left box without BG-color */
+  border: 2px solid #fdf2e9;
+  /* gives a little margin- space inside box to set texts inside */
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  /* color only right side */
+  background-color: #fdf2e9;
+  /* gives margin- space inside box to set texts inside */
+  padding: 4.8rem;
+  /*editng [BEST VALUE]*/
+  position: relative;
+  /* cut off the corners of the [ BEST VALUE] */
+  overflow: hidden;
+}
+
+/*editng & adding here  -[BEST VALUE]*/
+.pricing-plan--complete::after {
+ content: "Best value";
+ position: absolute;
+ /* shift on top of box */
+top: 6%;
+/* shift to right side of the box 
+[top:0; / right: 0;]
+after rotating we can change the positon on ryt side */
+right: -18%;
+
+ text-transform: uppercase;
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: #333;
+ background-color: #ffd43b;
+  /* small-yellow box right side on top*/
+  /* can increase the no. of 8rem to make long */
+ padding: 0.8rem 8rem;
+ /* rotate the [BEST VALUE] ON TOP */
+ transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  /* Bold */
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.plan-price {
+  font-size: 6.2rem;
+ /* Bold */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  /* space after $ sign */ 
+  margin-right: .8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #616161;
+}
+
+/* design links */
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+
+/*****************************
+ page-6  FEATURE SECTION-122
+*****************************/
+
+.feature-icon {
+ color: #e67e22;
+ height: 3.2rem;
+ width: 3.2rem;
+ background-color: #fdf2e9;
+ margin-bottom: 3.2rem;
+ padding: 1.6rem;
+ border-radius: 50%;
+}
+.feature-title {
+ font-size: 2.4rem;
+ color: #333;
+ font-weight: 700;
+ margin-bottom: 1.6rem;
+}
+.feature-text {
+ font-size: 1.8rem;
+ line-height: 1.8;
+}
+
+
+/*****************************/
+/* ----CTA SECTION-123/4---- */
+/*****************************/
+/************page 6***********/
+
+
+/* for starting new page- space on top */
+.section-cta {
+  /* give equal -space on 
+  TOP / RIGHT / BOTTOM / LEFT */
+  /*padding: 9.6rem 0 12.8rem 0;*/
+    /* OR:-  9.6rem 0 12.8rem*/
+  
+  /* here after changing the line is exactly B/W 2-sections page-6/7
+   top / right / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+
+/* p-6 background box & color  */
+.cta {
+  display: grid;
+  /*shift text in left side */
+  /* 2/3 = 66.6% + 33.3% */
+  grid-template-columns: 2fr 1fr;
+  /*background-color: #e67e22;*/
+  /* make box around meal-pic ad bottome */
+  box-shadow: 0 2.4rem 4.8rem rgba(0,0,0, 0.075);
+  border-radius: 11px;
+
+  /*****color from left to right *******
+  background-image: linear-gradient(90deg, #eb984e, #e67e22);
+  (to right, #eb984e, #e67e22);
+  (to left,  ..., ... );
+  (to right bottom, ..., ...,);
+
+
+
+  *****color from top to bottom = *****
+  (any-color, color); OR 
+  (180deg, #eb984e, orange);    
+  (360deg, ..., ...., );  */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+  
+  /* for temporary B/C we want the content 
+  to take the height so its not fixed 
+  [ its for link,email box size ] */
+  /*height: 50rem;*/
+}
+
+
+/* color P */
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+/* color H2 */
+.cta .heading-secondary {
+  color: #452607;
+  /* all the text become same color like-[.cta-text-box]
+  color: inherit; */
+  margin-bottom: 3.2rem;
+}
+
+/* increasing size of P */
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+/* past img inside box */
+.cta-img-box {
+  /* [ ../ ] means to go to parent folder 
+  after ( ../   PAST IMG link here ); */
+  background-image: linear-gradient(to right bottom, 
+  rgba(235, 151, 78, 0.35), 
+  rgba(230, 125, 34, 0.35)), 
+  url("../img-eating.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* EDITING [ Email- Name- ] 
+position them side/side verically & horizontally */
+.cta-form {
+  display: grid;
+  /* set email, phone no. box in 2-column */
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+
+/************ SECTION - 125 **************/
+/* making big- [sign up now] */
+.cta-form label {
+ display: block;
+ font-size: 1.6rem;
+ font-weight: 500;
+ margin-bottom: 1.2rem;
+}
+
+/* making big size of box - [full name, email] 
+.cta-form select = is for designing (plz choose 1 option)*/
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  /* box size */
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  /* designing text inside box, [full name]*/
+  font-family: inherit;
+  /* inside box text color no more dark black-color
+  after typing our name ad email,
+  it set color from the .cta-text-box H, where we set the color-brown*/
+  color: inherit;
+  /* no border color around the box */
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  /* light shadow around the box, instead of border */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* color of text inside box = [full name, email] */
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+
+
+ /*it stops for getting focused blue-ring (outline) 
+around the box-links after clicking or press tab key */
+.cta *:focus {
+  outline: none;
+  /* instead of blue-ring it design dotted border 
+  to all links after pressing tab key  
+  outline: 4px dotted #e67e22;*/
+  /* give alittle space to dottd border 
+  outline-offset: 8px;*/
+
+  /*design to links after pressing tab key */
+
+  /* in (general.css) its nt working for p-6 B/C the bg 
+  is dark so we edit in (style.css) also ad add
+   [ .cta ] befor  *:focus {}  , 
+    [ here we change color for p-6 only ] */
+
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+
+
+/*****************************/
+/* ----FOOTER SECTION-126---- */
+/*****************************/
+/************page 7***********/
+
+.footer {
+  /*space on to of p-7*/
+  padding: 12.8rem 0;
+  /* underline on top */
+  border-top: 1px solid #eee;
+}
+
+/***************SECTION-127/8**************/
+
+/*give to all equal space after H
+-LOGO, CONTACT, ACCOUNT.. */
+.grid--footer {
+ grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+/* Edit -LOGO, COPYRYGHT  
+  to look in same size frm top to bottom like 
+  -ACCOUNT, COMPANY.. */
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* gap after logo */
+.foote-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+/* designing insta, facebook, twitter */
+.social-links {
+  /* removing .dot */
+  list-style: none;
+  /* make them side/side */
+  display: flex;
+  /* gap B/W */
+  gap: 2.4rem;
+}
+
+/* size of inta, facebook, twitter */
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  /* Edit -LOGO, COPYRYGHT, ACCOUNT, COMPANY..  
+  to look in same size frm top to bottom 
+  NXT EDIT- [ .logo-col ]*/
+  margin-top: auto;
+}
+
+/* gap after H */
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+/* editing contact, after adding 
+(footer-link) in no. ad email. [index.html] */
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* in contact after Address -gap */
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  /* removig .dot frm left side */
+  list-style: none;
+  /* set links side/side */
+  display: flex;
+  /* set them back horizontally */
+  flex-direction: column;
+  /* gap B/W links */
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+/* after clicking it became dark */
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}

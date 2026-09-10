@@ -1,0 +1,373 @@
+/* in css -left click -new file -type -quaries.css */
+
+/*****************************/
+/** Breakpoints- SEC-131 **/
+/* Responding to small laptop */
+/*****************************/
+
+/*rem and em do NOT depend on html fontsize in media queries!
+instead, 1rem(root font-size) = 1em(current font-size) = 16pex */
+
+/*EDITING PAGE-1  (Sec-131) */
+/************************************************************/
+/* BELOW 1344px (smaller desktops ) */
+/***********************************************/
+@media (max-width: 84em);
+ {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+.gallery {
+  /* fix all img in 2-column like insta page */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/************************************/
+/* BELOW 1200px ( Landscape Tablets ) 
+               SEC-132*/
+/************************************/
+
+/* in 100% every thing look huge on screen 
+need to make smaller -
+
+all of the size that we define anywhere on our page are
+dependent on one setting- html { font-size: 62.5%; }
+if we change this every single font-size will emediately change.
+
+if we want to small every thing we need to change the font-size */
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px = 56.25%*/
+    font-size: 56.25%;
+  }
+
+  /* editing img */
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  /* making smaller H, the secondary-teritiary */
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-teritiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .testimonials-container {
+    /* bottom space, p-3
+    here it set background-color set up to text/imgs */
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/*************************************/
+/* BELOW 944px ( Tablets ) SEC-133*/
+/************************************/
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 8.5 = 50% */
+    font-size: 50%;
+  }
+
+  .hero {
+    /* if we have 2 pic- 1fr 1fr set them side/side
+    if 1 pic then it set to right side.
+    but here it set pic to bottom */
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  /*FOOD img/link in 1st page */
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  /* logo p-2*/
+  .logos img {
+    /*2.4rem*/
+    height: 5.4rem;
+  }
+
+  /* size of numbers in p-2 */
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-content {
+    /* p-2  white-space inside box -top,bottom,sides
+    except- top image */
+    padding: 2.4rem 3.2rem 3.2rem 3.2em;
+  }
+
+  .section-testimonials {
+    /* p-2 set all imgs like insta- in equal size
+     cover full page but its too hug need to edit */
+    grid-template-columns: 1fr;
+  }
+
+  /* p-2 set insta pics in vertical line b/c it was huge */
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta {
+    /*shift text in left side */
+    /* 3/5 = 60% + 2/5 = 40% */
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    /* set email, phone no. box in 1-column */
+    grid-template-columns: 1fr;
+  }
+
+  /* p-6 link [sign up now ] inside email box */
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+  /**********************************************/
+  /* MOBILE NAVIGATION   BELOW 1344px   SEC-134 */
+  /**********************************************/
+  .btn-mobile-nav {
+    /* it visible the menue on top */
+    display: block;
+  }
+
+  /* HIDE NAVIGATION FRM TOP to set our page in phone */
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*sec-134 shift the navigation frm top to the right page
+    by scrolling */
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* moved out the top page of navigation
+    from 1st page, slipped fast to right side */
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows no transitions at all */
+    /*display: none;*/
+    /* opacity: 20%; make navigation alittle bit visible */
+
+    /* 1) Hide it visuality */
+    opacity: 0%;
+
+    /* 2) Make it unaccessable to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    /* here navigation is back */
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    /* it bring back to 1st page, that 
+    we shifted the navigation frm top to the right page,
+    by scrolling */
+    transform: translateX(0%);
+  }
+
+  /* set X in bottom of menue */
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  /* hide the menu on top */
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    /* set text in horizontal line */
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+/*****************************************************/
+
+/*************************************/
+/* BELOW 704px ( Responding-Smaller-Tablets ) SEC-135*/
+/************************************/
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    /* make horizontal line B/W */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*Editing p-3*/
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* getting closer the H to the P  */
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  /*Editing p-5 making -PRICING-PLAN shorter */
+  .pricing-plan {
+    width: 100%;
+  }
+
+  /*Editing p-6 SET ALL (give to all equal space after H
+-LOGO, CONTACT, ACCOUNT..)
+[ grid-template-columns: (1fr 1fr 1fr); ] */
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    /*set Account, Company, Resources. on top[1st line] */
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/*************************************/
+/* BELOW 544px ( Responding-PHONES ) SEC-136*/
+/************************************/
+/* 550 / 16 = 34,375  [ 34*16 =544 ]*/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    /* make horizontal line B/W */
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    /* space inside of element sides/top/bottom */
+    padding: 2.4rem 0 4.8rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero.img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  /* fixed iphone img 1-2 */
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  /* fixed iphone img 3 */
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  /* moving img closer to its text */
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  /* p-5 set text to 1 column */
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  /* Editing p-5 insta photoes, [make 4 column] */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  /* Editing p-6 */
+  .cta {
+    /* set on phone size but hide img,
+    coz it was side/side  */
+    grid-template-columns: 1fr;
+  }
+
+  /* reduce too much space in side box */
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  /* it visible img in bottom */
+  .cta-img-box {
+    height: 32rem;
+    /* shift img on top */
+    grid-row: 1;
+  }
+}
+
+/*- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 /
+ 86 / 98
+ 
+ - Spacing system (px)  -[WHITESPACE]
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
